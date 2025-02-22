@@ -1,0 +1,17 @@
+<div id="<%= dom_id idea %>" class="center">
+  <p class="red">
+    <strong>タイトル:</strong>
+    <%= idea.name %>
+  </p>
+
+  <p>
+    <strong>詳細:</strong>
+    <%= idea.description %>
+  </p>
+
+  <p>
+    <strong>画像:</strong>
+    <%= image_tag(idea.picture_url, width: 600) if idea.picture? %>
+  </p>
+
+</div>

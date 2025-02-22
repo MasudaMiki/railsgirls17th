@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Ideas" %>
+
+<h1>Ideas</h1>
+
+<div id="ideas">
+  <% @ideas.each do |idea| %>
+    <%= render idea %>
+    <div class="d-grid gap-2 mb-3">
+    <% if idea.lucky? %>
+    ランダムでコメントアウトされたり表示されたりする部分。イースターエッグにもできそう。
+    大カッコで配列を作って.sampleで配列の中の要素をランダムに取り出す仕組み。
+    randで0~1の数値とってきたり
+    randでとってきた数値を任意の値と比較してtrue,falseを返させたり
+    shuffleで配列の要素の順番を入れ替えたり
+    shuffleで入れ替えた配列のN番目を撮ってきて出力したり。
+    配列楽しいねえ。
+    <% end %>
+    <button class="btn btn-outline-primary btn-sm">
+      <%= link_to "詳しく見てみる", idea, class: "text-secondary"%>
+    </button>
+    </div>
+  <% end %>
+</div>
+
+<button class="btn btn-info">
+<%= link_to "何か思いついた？", new_idea_path %>
+</button>
