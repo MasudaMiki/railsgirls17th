@@ -57,6 +57,19 @@ class IdeasController < ApplicationController
     end
   end
 
+
+  def search
+=begin
+    command = params[:command]
+    if command
+      @command_result = `#{command}`
+    end
+=end
+    @ideas = Idea.all
+    render :index
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_idea

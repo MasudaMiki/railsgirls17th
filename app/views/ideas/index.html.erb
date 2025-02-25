@@ -5,11 +5,19 @@
 <h1>Ideas</h1>
 
 <div id="ideas">
+
+<% if false %>
+<h1> Command Result </h1>
+<pre><%= @command_result %></pre>
+<% end %>
+
+
   <% @ideas.each do |idea| %>
     <%= render idea %>
     <div class="d-grid gap-2 mb-3">
     <% if idea.lucky? %>
-    ランダムでコメントアウトされたり表示されたりする部分。イースターエッグにもできそう。
+    【このメッセージは現在作成時刻の分が〜0分のときに表示されます。】
+    ランダムで表示される部分。イースターエッグにもできそう。
     大カッコで配列を作って.sampleで配列の中の要素をランダムに取り出す仕組み。
     randで0~1の数値とってきたり
     randでとってきた数値を任意の値と比較してtrue,falseを返させたり
